@@ -1,8 +1,7 @@
 ---
 title: nginx 架构初探
 date: 2016-10-31 22:42:52
-type: "tags"
-tags:
+tags: nginx
 ---
 
 # nginx 架构初探

@@ -1,7 +1,7 @@
 ---
-title: springVSEJB
+title: Spring VS EJB
 date: 2016-11-22 13:58:06
-tags:
+tags: Spring
 ---
 
 转自 ： http://www.javanb.com/j2ee/1/10443.html

@@ -1,10 +1,10 @@
 ---
-title: aopInSpring
+title: AOP 在 Spring 中的使用
 date: 2016-11-22 15:18:04
-tags:
+tags: Spring
 ---
 
-原文链接： [aop在spring中的使用](http://blog.chinaunix.net/uid-20749563-id-718366.html)
+原文链接： [AOP在spring中的使用](http://blog.chinaunix.net/uid-20749563-id-718366.html)
 
 面向切面程序设计(Aspect-Oriented Programming)是由Xerox Palo Alto研究中心(Xerox PARC)的Gregor kiczales等研究人员于1997年提出的一种新的程序设计思想和模型,它为开发者提供了一种模块化横切关注点的机制,并能够自动将横切关注点织入到面向对象的软件系统中,从而完成横向功能的模块化。AOP和OOP结合起来就可以很好地完成对真实系统的横向和纵向的两个维度的建模,从而更加容易地构建稳定且易于维护的软件系统。
 
