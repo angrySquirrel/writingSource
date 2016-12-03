@@ -40,3 +40,6 @@ sudo pip install keras --trusted-host pypi.douban.com
 pip install tensorflow-gpu -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
 
 ```
+**安装anaconda** ： 一个python科学运算的包的合集
+https://www.continuum.io/downloads
+如果在安装过程中提示找不到BLAS的库（Scipy依赖于它，那么可以考虑一劳永逸的把它装上）
