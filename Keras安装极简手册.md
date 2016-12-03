@@ -33,3 +33,10 @@ sudo pip install h5py  --trusted-host pypi.douban.com
 ``` 
 sudo pip install keras --trusted-host pypi.douban.com
 ```
+
+# windows keras
+与ubuntu上安装相似，但是更支持gpu的版本的命令行安装
+```
+pip install tensorflow-gpu -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+
+```
