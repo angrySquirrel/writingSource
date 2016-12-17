@@ -10,7 +10,6 @@ https://github.com/lyfeyaj/sublime-text-imfix
 选中下面一个view，可以打开pdb，pdb是python debugger的缩写
 
 ### pdb命令
-基础命令
 - h(elp)命令：会打印当前版本 Pdb可用的命令，如果要查询某个命令，可输入 h [command] ，例如 h l 查看 list命令
 - l(ist)命令：可以列出当前将要运行的代码块
 - b(break)：设置断点
