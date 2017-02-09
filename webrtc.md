@@ -1,7 +1,6 @@
 ## webrtc tutorial
 
 - one blog
-
 WebRTC requires that peers exchange information on how to connect to one another before the actual connection can be begin.  this is  a short and sweet Node.js server that communicates with clients via websockets. https://shanetully.com/2014/09/a-dead-simple-webrtc-example/
 
 - webrtc API : https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API
