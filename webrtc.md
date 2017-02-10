@@ -22,3 +22,6 @@ https://codelabs.developers.google.com/codelabs/webrtc-web/#0
 
 - Sending images with WebRTC data channels  
 http://richard.to/programming/sending-images-with-webrtc-data-channels.html
+
+- Transfer a file with WebRTC  
+https://webrtc.github.io/samples/src/content/datachannel/filetransfer/
