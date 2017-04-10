@@ -40,7 +40,7 @@ var userSaveSpy = spyOn(User.prototype, 'save');
 ```
 Mocha does not come with a test double library. Instead, you will need to load in Sinon into your test harness. 
 
-**Sinon is a very powerful test double library and is the equivalent of Jasmine spies with a little more. **
+`Sinon is a very powerful test double library and is the equivalent of Jasmine spies with a little more.`
 
 
 
