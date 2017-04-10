@@ -68,13 +68,53 @@ in many situations you won’t need to use Sinon if you are using Jasmine
 One reason I do use Sinon with Jasmine is for its `fake server`
 
 
+### Asynchronous Tests
+Asynchronous testing in Jasmine 2.x and Mocha is the same.
 
+### Sinon Fake Server
+One feature that Sinon has that Jasmine does not is a fake server. This allows you to setup fake responses to AJAX requests made for certain URLs.
+``` javascript
+it('should return a collection object containing all users', function(done) {
+  var server = sinon.fakeServer.create();
+  server.respondWith("GET", "/users", [
+    200,
+    { "Content-Type": "application/json" },
+    '[{ "id": 1, "name": "Gwen" },  { "id": 2, "name": "John" }]'
+  ]);
+
+  Users.all().done(function(collection) {
+    expect(collection.toJSON()).to.eql([
+      { id: 1, name: "Gwen" },
+      { id: 2, name: "John" }
+    ]);
+
+    done();
+  });
+
+  server.respond();
+  server.restore();
+});
+```
+Sinon’s fake server is similar to the $httpBackend service provided in angular mocks.
+
+### Conclusion
+- The Jasmine framework has almost everything built into it including assertions/expectations and test double utilities (which come in the form of spies).
+
+- Mocha is just a test runner and does not include assertion and test double utilities. 
+
+- There are several choices for assertions when using Mocha, and Chai tends to be the most popular. 
+
+- Test doubles in Mocha also requires another library, and Sinon.js is often the de-facto choice.
+- Sinon can also be a great addition to your test harness for its fake server implementation.
 
 ---
 Ref  
-Jasmine vs. Mocha, Chai, and Sinon
-- http://thejsguy.com/2015/01/12/jasmine-vs-mocha-chai-and-sinon.html
+- Jasmine vs. Mocha, Chai, and Sinon  
+http://thejsguy.com/2015/01/12/jasmine-vs-mocha-chai-and-sinon.html
 
-http://sinonjs.org/
+- API documentation - Sinon.JS  
+http://sinonjs.org/releases/v2.1.0/
+
+
 
 
