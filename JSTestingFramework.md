@@ -41,7 +41,33 @@ var userSaveSpy = spyOn(User.prototype, 'save');
 Mocha does not come with a test double library. Instead, you will need to load in Sinon into your test harness. 
 
 `Sinon is a very powerful test double library and is the equivalent of Jasmine spies with a little more.`
-`Sinon breaks up test doubles into three different categories: spies, stubs, and mocks, each with subtle differences.`
+`Sinon breaks up test doubles into three different categories: **spies**, **stubs**, and **mocks**, each with subtle differences.`
+
+
+###### Sinon Spy
+A spy in Sinon calls through to the method being spied on whereas you have to specify this behavior in Jasmine. For example:
+```
+spyOn(user, 'isValid').andCallThrough() // Jasmine
+// is equivalent to
+sinon.spy(user, 'isValid') // Sinon
+```
+In your test, the original user.isValid would be called.
+
+The next type of test double is a stub, which acts as a controllable replacement. Stubs are similar to the default behavior of Jasmine spies where the original method is not called. For example:
+###### Sinon Stub
+
+```
+sinon.stub(user, 'isValid').returns(true) // Sinon
+// is equivalent to
+spyOn(user, 'isValid').andReturns(true) // Jasmine
+```
+In your code, if user.isValid is called during the execution of your tests, the original user.isValid would not be called and a fake version of it (the test double) that returns true would be used.
+
+#### when to use sinon with Jasmine
+in many situations you won’t need to use Sinon if you are using Jasmine
+One reason I do use Sinon with Jasmine is for its `fake server`
+
+
 
 
 ---
