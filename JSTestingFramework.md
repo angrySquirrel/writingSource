@@ -6,7 +6,7 @@
 - Mocha
 Chai and Sinon, that are often used in conjunction with Jasmine and Mocha.
 
-
+### API
 The APIs of Jasmine and Mocha are very similar. They both allow you to write your tests in the behaviour driven development (BDD) style. You might ask, “What is BDD?”. In short, BDD is simply a style of writing tests that focusses on the language used.
 
 Jasmine
@@ -19,8 +19,20 @@ Chai
 expect(calculator.add(1, 4)).to.equal(5);
 ```
 
+#### Test Doubles
+Test doubles are often compared to stunt doubles, as they replace one object with another for testing purposes
+类似于演员的替身。
 
+##### Spies
 
+ In Jasmine, test doubles come in the form of spies. A spy is a function that replaces a particular function where you want to control its behavior in a test and record how that function is used during the execution of that test.
+
+Some of the things you can do with spies include:
+- See how many times a spy was called
+- Specify a return value to force your code to go down a certain path
+- Tell a spy to throw an error
+- See what arguments a spy was called with
+- Tell a spy to call the original function (the function it is spying on). By default, a spy will not call the original function.
 
 
 
