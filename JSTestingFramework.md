@@ -34,6 +34,14 @@ Some of the things you can do with spies include:
 - See what arguments a spy was called with
 - Tell a spy to call the original function (the function it is spying on). By default, a spy will not call the original function.
 
+In Jasmine, you can spy on existing methods like this:
+``` javascript
+var userSaveSpy = spyOn(User.prototype, 'save');
+```
+Mocha does not come with a test double library. Instead, you will need to load in Sinon into your test harness. 
+
+**Sinon is a very powerful test double library and is the equivalent of Jasmine spies with a little more. **
+
 
 
 ---
